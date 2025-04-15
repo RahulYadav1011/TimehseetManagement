@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigner_and_Manager_Rule</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISBLANK(Assigned_To__c)) &amp;&amp;
+NOT(ISBLANK(Manager__c)) &amp;&amp;
+Assigned_To__c = Manager__c</errorConditionFormula>
+    <errorMessage>Assigned To and Manager cannot be the same user.</errorMessage>
+</ValidationRule>

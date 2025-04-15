@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Log Time for Project" icon-name="standard:timesheet_entry">
+      <lightning-record-edit-form
+        object-api-name="Time_Log__c"
+        onsuccess={handleSuccess}
+        onsubmit={handleSubmit}
+      >
+        <lightning-messages></lightning-messages>
+  
+        <lightning-input-field required="true" field-name="Date__c"></lightning-input-field>
+        <lightning-input-field  required="true" field-name="Project__c"></lightning-input-field>
+        <lightning-input-field required="true" field-name="Hours__c"></lightning-input-field>
+        <lightning-input-field required="true" field-name="Assigned_To__c"></lightning-input-field>
+        <lightning-input-field  required="true" field-name="Manager__c"></lightning-input-field>
+        <lightning-input-field required="true" field-name="Description__c"></lightning-input-field>
+  
+        <lightning-button
+          type="submit"
+          label="Submit"
+          class="slds-m-top_medium"
+          variant="brand"
+        ></lightning-button>
+      </lightning-record-edit-form>
+    </lightning-card>
+  </template>
